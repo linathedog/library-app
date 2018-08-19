@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>E-mail</th>
+      <th colspan="2">E-mail</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +12,8 @@
     <tr>
       <th>{{invitation.id}}</th>
       <td>{{invitation.email}}</td>
+      <td>{{#link-to 'admin.edit' invitation.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+      <button class="btn btn-danger btn-xs" {{action 'deleteInvitation' invitation}}>Delete</button></td>
     </tr>
   {{/each}}
   </tbody>
