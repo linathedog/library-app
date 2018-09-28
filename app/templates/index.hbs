@@ -1,22 +1,46 @@
-<h1>Home Page</h1>
+
+<div class="content">
 <div class="jumbotron text-center">
-  <h1>{{indexMessage}}</h1>
+  <div class="header-main">
+  <h1>
+    Explore<br/>
+    Discover.<br/>
+    Learn.<br/>
+  </h1>
+  <h2>
+    LIBRARY APP.
+  </h2>
+  <h3>
+    Never miss a word.<br/>
+    Sign up to our monthly newsletter and<br/>
+    get exclusive updates of our new<br/>
+    features of the library app<br/>
+  </h3>
 
-  <br/><br/>
+</div>
 
-  <p>Don't miss our launch date, request an invitation now.</p>
 
   <div class="form-horizontal form-group form-group-lg row">
-    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-4">
       {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
     </div>
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
-        <button class="btn btn-primary btn-lg btn-block" disabled={{isDisabled}} {{action 'saveInvitation'}}>Request invitation</button>
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-1">
+        <button class="btn btn-primary btn-lg btn-block mainbtn" disabled={{isDisabled}} {{action 'saveInvitation'}}></button>
     </div>
   </div>
   {{#if responseMessage}}
-    <div class="alert alert-success">{{responseMessage}}</div>
+  <!-- <div class="alert alert-success">{{responseMessage}}</div> -->
   {{/if}}
 
   <br/><br/>
+</div>
+</div>
+<div class="footer">
+
+  <div class="footer-msgs ">FIND THE APP. ON</div>
+
+  <div class="icons8-instagram"></div>
+  <div class="icons8-twitter"></div>
+
+
 </div>
