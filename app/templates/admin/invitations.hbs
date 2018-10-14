@@ -1,20 +1,28 @@
-<h1>Invitations</h1>
+<div class="books-wrapper">
+<div class="books-container">
+<h1 class="library-header">Invitations</h1>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped no-border book-table">
   <thead>
     <tr>
-      <th>ID</th>
-      <th colspan="2">E-mail</th>
+      <th class="no-border">
+        <h3 class="table-title invit-table-title">ID</h3>
+      </th>
+      <th colspan="2" class="no-border">
+        <h3 class="table-title invit-table-title">E-mail</h3>
+      </th>
     </tr>
   </thead>
   <tbody>
   {{#each model as |invitation|}}
-    <tr>
+    <tr class="books-table">
       <th>{{invitation.id}}</th>
       <td>{{invitation.email}}</td>
-      <td>{{#link-to 'admin.edit' invitation.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
-      <button class="btn btn-danger btn-xs" {{action 'deleteInvitation' invitation}}>Delete</button></td>
+      <td>{{#link-to 'admin.edit' invitation.id }}<i class="fas fa-pencil-alt invit-icons"></i>{{/link-to}}
+      <button class="delete-button" {{action 'deleteInvitation' invitation}}><i class="fas fa-trash"></i></button></td>
     </tr>
   {{/each}}
   </tbody>
 </table>
+</div>
+</div>

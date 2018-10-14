@@ -1,19 +1,27 @@
-<h1>Authors</h1>
+<div class="books-wrapper">
+<div class="books-container">
+<h1 class="library-header">Authors</h1>
 
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered no-border table-striped book-table">
   <thead>
   <tr>
-    <th>
+    <th class="no-border">
+      <h3 class="table-title">
       Name
-      <br><small class="small not-bold">(Click on name for editing)</small>
+      </h3>
+    <br><small class="small table-title-small">click name to edit</small>
     </th>
-    <th class="vtop">Books</th>
+    <th class=" vtop no-border">
+      <h3 class="table-title">
+        Books
+      </h3>
+    </th>
   </tr>
   </thead>
   <tbody>
   {{#each model as |author|}}
-    <tr>
+    <tr class="books-table">
       <td>
         {{#if author.isEditing}}
           <form {{action 'saveAuthor' author on='submit'}} class="form-inline">
@@ -40,3 +48,5 @@
   {{/each}}
   </tbody>
 </table>
+</div>
+</div>

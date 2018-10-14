@@ -1,18 +1,26 @@
-<h1>Contacts</h1>
+<div class="books-wrapper">
+<div class="books-container">
+<h1 class="library-header">Contacts</h1>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped no-border book-table">
   <thead>
     <tr>
-      <th>E-mail</th>
-      <th>Message</th>
+      <th class="no-border">
+        <h3 class="table-title invit-table-title">E-mail</h3>
+      </th>
+      <th class="no-border">
+        <h3 class="table-title invit-table-title">Message</h3>
+      </th>
     </tr>
   </thead>
   <tbody>
   {{#each model as |contact|}}
-    <tr>
+    <tr class="books-table">
       <th>{{contact.email}}</th>
       <td>{{contact.message}}</td>
     </tr>
   {{/each}}
   </tbody>
 </table>
+</div>
+</div>

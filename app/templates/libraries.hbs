@@ -1,10 +1,12 @@
+
 <div class="library-page">
 <div class="library-container">
 <h1 class="library-header">Libraries.</h1>
 <div class="well">
   <ul class="nav nav-pills">
-    {{#link-to 'libraries.index' tagName="li"}}<a href="">List all</a>{{/link-to}}
-    {{#link-to 'libraries.new' tagName="li"}}<a href="">Add new</a>{{/link-to}}
+    {{!-- added class to buttons --}}
+    {{#link-to 'libraries.index' tagName="li" class="library-button" }}<a href=""><i class="fas fa-bars"></i>LIST ALL</a>{{/link-to}}
+    {{#link-to 'libraries.new' tagName="li"class="library-button" }}<a href="" ><i class="fas fa-plus"></i>ADD LIBRARY</a>{{/link-to}}
   </ul>
 </div>
 

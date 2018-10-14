@@ -1,27 +1,35 @@
-<h1>Books</h1>
+<div class="books-wrapper">
+<div class="books-container">
+<h1 class="library-header">Books</h1>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped no-border book-table">
   <thead>
-  <tr>
-    <th class="vtop wider">
-      Author
-      <br><small class="small not-bold">(Click on the name for editing)</small>
+  <tr class="">
+    <th class="vtop wider no-border">
+      <h3 class="table-title">Author</h3>
+      <br><small class="small table-title-small">click name to edit</small>
     </th>
-    <th>
+    <th class=" vtop no-border">
+      <h3 class="table-title">
       Title
-      <br><small class="small not-bold">(Click on the title for editing)</small>
+    </h3>
+      <br><small class="small table-title-small">click name to edit</small>
     </th>
-    <th class="vtop">Release Year</th>
-    <th class="vtop">
+    <th class="vtop no-border">
+      <h3 class="table-title">Release Year</h3>
+      </th>
+    <th class="vtop no-border">
+      <h3 class="table-title">
       Library
-      <br><small class="small not-bold">(Click on the name for editing)</small>    </th>
+    </h3>
+      <br><small class="small table-title-small">click name to edit</small>   </th>
   </tr>
   </thead>
-  <tbody>
+  <tbody class="books-tabl">
   {{#each model as |book|}}
-    <tr>
+    <tr class="books-table">
 
-      <td>
+      <td class="books-tables">
         {{#if book.isAuthorEditing}}
 
           {{author-select
@@ -74,3 +82,5 @@
   {{/each}}
   </tbody>
 </table>
+</div>
+</div>

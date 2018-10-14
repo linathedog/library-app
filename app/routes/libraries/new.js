@@ -28,6 +28,7 @@ export default Route.extend({
   model() {
     return this.store.createRecord('library');
   },
+  
 
   setupController(controller, model) {
     this._super(controller, model);

@@ -80,7 +80,7 @@ export default Route.extend({
       // You don't need this callback mess when your adapter properly manages relations.
       // If Firebase fix this bug, we can remove this part.
       book.get('library').then((previousLibrary) => {
-        previousLibrary.get('books').then((previousLibraryBooks) => {
+          previousLibrary.get('books').then((previousLibraryBooks) => {
           previousLibraryBooks.removeObject(book);
           previousLibrary.save();
         });

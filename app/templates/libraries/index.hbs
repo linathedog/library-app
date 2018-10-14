@@ -11,13 +11,15 @@
   </div>
 {{/each}} -->
 
-<h2>List</h2>
 <div class="row">
   {{#each model as |library|}}
-    <div class="col-md-4">
+    <div class="col-md-4 library-panel">
       {{#library-item item=library}}
-        {{#link-to 'libraries.edit' library.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
-        <button class="btn btn-danger btn-xs" {{action 'deleteLibrary' library}}>Delete</button>
+        {{#link-to 'libraries.edit' library.id}}
+
+        <i class="fas fa-pencil-alt"></i>
+        {{/link-to}}
+        <button class="delete-button" {{action 'deleteLibrary' library}}><i class="fas fa-trash"></i></button>
       {{/library-item}}
     </div>
   {{/each}}
